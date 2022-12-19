@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-deployment
+  namespace: test-ns
+  labels:
+    env: dev
+spec:
+  template:
+    metadata:
+      name: test-pod
+      labels:
+        env: dev
+    spec:
+      containers:
+        - name: test-container
+          image: public.ecr.aws/l6m2t8p7/docker-2048:latest
+          # image: nginx
+  replicas: 2
+  selector:
+    matchLabels:
+      env: dev

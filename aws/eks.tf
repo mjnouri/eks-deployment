@@ -110,8 +110,8 @@ resource "aws_eks_node_group" "node_group_1" {
 }
 
 resource "aws_iam_role" "eks_fargate_role" {
-  count              = var.eks_fargate_profile ? 1 : 0
-  name = "${var.project_name}_${var.env}_eks_fargate_role"
+  count = var.eks_fargate_profile ? 1 : 0
+  name  = "${var.project_name}_${var.env}_eks_fargate_role"
 
   assume_role_policy = jsonencode({
     Statement = [{

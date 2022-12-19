@@ -1,6 +1,6 @@
 terraform {
     backend "s3" {
-      bucket = "BUCKET_NAME"
+      bucket = "devils-bucket"
       key    = "tf-state/eks-deployment-aws/terraform.tfstate"
       region = "us-east-1"
     }
