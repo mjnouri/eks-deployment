@@ -18,8 +18,6 @@ Setup
 1. Replace variables.tf lines 2, 6, 10 with your name, project name, and environment.
 1. Set EKS Cluster node count at variables.tf lines 14, 18, and 22
 1. Set EKS Fargate profile and Node Group to true or false at variables.tf lines 26 and 30.
-1. cd ../terraform-k8s/
-1. Replace providers.tf line 3 with your S3 bucket name to store Terraform remote state
 
 Apply infrastructure
 1. cd ~/eks-deployment/terraform-aws/

@@ -1,9 +1,9 @@
 terraform {
-    backend "s3" {
-      bucket = "devils-bucket"
-      key    = "tf-state/eks-deployment-aws/terraform.tfstate"
-      region = "us-east-1"
-    }
+# backend "s3" {
+#   bucket = "devils-bucket"
+#   key    = "tf-state/eks-deployment-aws/terraform.tfstate"
+#   region = "us-east-1"
+# }
   required_providers {
     aws = {
       source  = "hashicorp/aws"
